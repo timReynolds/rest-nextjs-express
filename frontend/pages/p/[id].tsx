@@ -6,14 +6,14 @@ import Router from 'next/router'
 import { PostProps } from '../../components/Post'
 
 async function publish(id: number): Promise<void> {
-  await fetch(`http://localhost:3001/publish/${id}`, {
+  await fetch(`http://${process.env.BACKEND_HOST}/publish/${id}`, {
     method: 'PUT',
   })
   await Router.push('/')
 }
 
 async function destroy(id: number): Promise<void> {
-  await fetch(`http://localhost:3001/post/${id}`, {
+  await fetch(`http://${process.env.BACKEND_HOST}/post/${id}`, {
     method: 'DELETE',
   })
   await Router.push('/')
@@ -67,7 +67,7 @@ const Post: React.FC<PostProps> = props => {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const id = context?.params?.id
-  const res = await fetch(`http://localhost:3001/post/${id}`)
+  const res = await fetch(`http://${process.env.BACKEND_HOST}/post/${id}`)
   const data = await res.json()
   return { props: { ...data } }
 }
