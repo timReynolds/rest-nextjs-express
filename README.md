@@ -4,37 +4,21 @@ This example shows how to implement a **fullstack app in TypeScript with [Next.j
 
 ## Getting Started
 
-### 1. Download example and install dependencies
+### 1. Clone repository and install dependencies
 
-Download this example:
+Clone this repository:
 
 ```
-curl https://codeload.github.com/prisma/prisma-examples/tar.gz/latest | tar -xz --strip=2 prisma-examples-latest/typescript/rest-nextjs-express
+git clone https://github.com/roncohen/rest-nextjs-express
 ```
 
-Navigate to the example:
+Navigate to the project:
 
 ```
 cd rest-nextjs-express
 ```
 
-<details><summary><strong>Alternative:</strong> Clone the entire repo</summary>
-
-Clone this repository:
-
-```
-git clone git@github.com:prisma/prisma-examples.git --depth=1
-```
-
-Navigate to the example:
-
-```
-cd prisma-examples/typescript/rest-nextjs-express
-```
-
-</details>
-
-#### Install npm dependencies: 
+#### Install npm dependencies:
 
 Install dependencies for your [`backend`](./backend). Open a terminal window and install the `backend`'s dependencies
 
